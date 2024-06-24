@@ -1,33 +1,27 @@
 package sitem.sitem.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "unidades")
+@Table(name = "cidades")
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Unidade {
+public class Cidade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idUnidade;
+    private Integer idCidade;
     private String nome;
-    private String endereco;
-    private String complemento;
-    private String bairro;
-
-    @OneToOne
-    @JoinColumn(name = "cidade_id")
-    private Cidade cidade;
 
     @OneToOne
     @JoinColumn(name = "estado_id")
     private Estado estado;
-
-    private String cep;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -35,7 +29,7 @@ public class Unidade {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    public Unidade() {
+    public Cidade() {
         super();
     }
 
