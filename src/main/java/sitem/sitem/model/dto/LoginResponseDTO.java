@@ -1,4 +1,4 @@
-package com.sitem.demo.core.model.dto;
+package sitem.sitem.model.dto;
 
 public record LoginResponseDTO(String token) {
 }

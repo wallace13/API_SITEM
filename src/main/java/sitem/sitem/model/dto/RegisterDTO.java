@@ -1,6 +1,6 @@
-package com.sitem.demo.core.model.dto;
+package sitem.sitem.model.dto;
 
-import com.sitem.demo.core.model.UserRole;
+import sitem.sitem.model.UserRole;
 
 public record RegisterDTO(String login, String password, UserRole role) {
 }
