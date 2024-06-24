@@ -11,7 +11,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "Cidades")
+@RequestMapping(value = "Cidade")
 public class CidadeController {
 
     private final CidadeService service;
